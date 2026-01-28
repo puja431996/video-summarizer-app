@@ -1,8 +1,11 @@
 {
+  "version": 2,
   "build": {
     "env": {
-      "VERCEL_CLI_VERSION": "50.5.2"
-    }
+      "PYTHON_VERSION": "3.9.18"
+    },
+    "command": "pip install -r requirements.txt",
+    "directory": "./"
   },
   "functions": {
     "app.py": {
@@ -12,7 +15,7 @@
   "routes": [
     {
       "src": "/",
-      "dest": "app.py"
+      "dest": "index.html"
     },
     {
       "src": "/(.*)",
